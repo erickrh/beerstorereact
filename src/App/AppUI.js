@@ -1,6 +1,7 @@
 import React from 'react';
 // import { TodoContext } from '../TodoContext';
 import { Header } from '../Header';
+import { Title } from '../Title';
 
 function AppUI() {
   // const {
@@ -10,6 +11,8 @@ function AppUI() {
   return (
     <React.Fragment>
       <Header />
+
+      <Title />
     </React.Fragment>
   );
 }
