@@ -2,6 +2,8 @@ import React from 'react';
 // import { TodoContext } from '../TodoContext';
 import { Header } from '../Header';
 import { Title } from '../Title';
+import { BeerList } from '../BeerList';
+import { BeerItem } from '../BeerItem';
 
 function AppUI() {
   // const {
@@ -13,6 +15,10 @@ function AppUI() {
       <Header />
 
       <Title />
+
+      <BeerList>
+        <BeerItem />
+      </BeerList>
     </React.Fragment>
   );
 }
