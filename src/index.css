@@ -6,16 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-}
-
 /* poppins-regular - latin */
 @font-face {
   font-family: 'Poppins';
