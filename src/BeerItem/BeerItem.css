@@ -39,18 +39,21 @@
 .beerTitle {
   font-weight: 700;
   font-size: 14px;
+  margin-top: 9px;
 }
 
 .beerDescription {
   font-weight: 400;
   font-size: 11px;
   color: #6D7275;
+  margin-top: 15px;
 }
 
 .price {
   font-weight: 600;
   font-size: 14.16px;
   color: #101111;
+  margin-top: 14px;
 }
 
 .agregarButton {
@@ -59,6 +62,16 @@
   border: 1px solid #E6E6E6;
   background-color: #F4F4F4;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agregarButton p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14.16px;
+  color: #0000A3;
 }
 
 @media only screen and (min-width: 720px) {

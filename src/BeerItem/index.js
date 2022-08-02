@@ -16,7 +16,9 @@ function BeerItem() {
               <p className="price">$75.000</p>
             </div>
           </div>
-          <div className="agregarButton"></div>
+          <div className="agregarButton">
+            <p>agregar</p>
+          </div>
         </li>
 
         <li className="beerItemContainer">
