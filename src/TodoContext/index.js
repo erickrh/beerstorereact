@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useFetchAPI } from './useFetchAPI';
 
 const TodoContext = React.createContext();
 
 function TodoProvider(props) {
-
-  // Context here.
+  const {
+    items,
+    error,
+    isLoaded,
+  } = useFetchAPI('./products.json');
 
   return (
     <TodoContext.Provider value={{
-      // Elements here.
+      items,
+      error,
+      isLoaded,
     }}>
       {props.children}
     </TodoContext.Provider>

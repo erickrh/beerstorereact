@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './BeerItem.css';
 import cassels from '../img/cassels.png';
 
-function BeerItem() {
+function BeerItem(props) {
+
   return (
     <div className="flexContainer">
       <div className='gridItemContainer'>
@@ -11,7 +13,7 @@ function BeerItem() {
           <div className="itemContainer">
             <div className="frame">
               <img src={cassels} alt="cassels" />
-              <p className='beerTitle'>Cassels Milk Stou</p>
+              <p className='beerTitle'>{`${props.name}`}</p>
               <p className="beerDescription">Cassels & Sons Brewing. Cerveza porter y stout</p>
               <p className="price">$75.000</p>
             </div>
@@ -30,5 +32,10 @@ function BeerItem() {
     </div>
   );
 }
+
+// Fix for 'React eslint error missing in props validation'
+BeerItem.propTypes = {
+  name: PropTypes.node.isRequired
+};
 
 export { BeerItem };
