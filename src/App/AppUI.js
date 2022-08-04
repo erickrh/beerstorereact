@@ -25,9 +25,9 @@ function AppUI() {
             <BeerItem
               key={item.name}
               name={item.name}
-              // description={item.description}
-              // price={item.price}
-              // img={item.img}
+              description={item.description}
+              price={item.price}
+              img={item.img}
               // filterId={item.filterId}
             />
           ))

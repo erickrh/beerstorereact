@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './BeerList.css';
 
 function BeerList(props) {
   return (
     <section>
-      <ul className="beerListContainer">
-        {props.children}
-      </ul>
+      <div className="flexContainer">
+        <ul className="gridItemContainer">
+          {props.children}
+        </ul>
+      </div>
     </section>
   );
 }

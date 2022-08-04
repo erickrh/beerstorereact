@@ -1,0 +1,17 @@
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  /* padding: 0 15px; */
+}
+
+.gridItemContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+@media only screen and (min-width: 720px) {
+  .gridItemContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

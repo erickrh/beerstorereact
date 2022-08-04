@@ -1,22 +1,10 @@
-.flexContainer {
-  display: flex;
-  justify-content: center;
-  /* padding: 0 15px; */
-}
-
-.gridItemContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-}
-
 .beerItemContainer {
   list-style: none;
 }
 
 .itemContainer {
   width: 165px;
-  height: 278px;
+  height: 294px;
   border: 1px solid #E5E5E5;
   box-sizing: border-box;
   display: flex;
@@ -28,18 +16,20 @@
   height: 278px;
   /* border: 1px solid red; */
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .frame img {
   width: 137px;
   height: 140px;
-  margin-top: 18px;  
+  margin-top: 18px;
 }
 
-.beerTitle {
+.beerName {
   font-weight: 700;
   font-size: 14px;
-  margin-top: 9px;
+  margin-top: 16px;
 }
 
 .beerDescription {
@@ -53,7 +43,12 @@
   font-weight: 600;
   font-size: 14.16px;
   color: #101111;
-  margin-top: 14px;
+  margin-top: auto;
+  margin-bottom: 2px;
+}
+
+.price::before {
+  content:'$';
 }
 
 .agregarButton {
@@ -72,10 +67,4 @@
   font-weight: 600;
   font-size: 14.16px;
   color: #0000A3;
-}
-
-@media only screen and (min-width: 720px) {
-  .gridItemContainer {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
