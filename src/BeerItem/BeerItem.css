@@ -29,14 +29,15 @@
 .beerName {
   font-weight: 700;
   font-size: 14px;
-  margin-top: 16px;
+  margin-top: 13px;
 }
 
 .beerDescription {
   font-weight: 400;
   font-size: 11px;
   color: #6D7275;
-  margin-top: 15px;
+  margin-top: 11px;
+  line-height: 16px;
 }
 
 .price {

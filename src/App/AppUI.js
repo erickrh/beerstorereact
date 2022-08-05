@@ -28,7 +28,7 @@ function AppUI() {
               description={item.description}
               price={item.price}
               img={item.img}
-              // filterId={item.filterId}
+              filterId={item.filterId}
             />
           ))
         }
