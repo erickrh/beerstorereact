@@ -1,0 +1,45 @@
+.contactContainer {
+  width: 100%;
+  height: 209px;
+  background-color: #0F0F0F;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.contactContainer h3 {
+  margin-top: 36px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14.16px;
+}
+
+.icons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.chat, .call {
+  width: 70px;
+  height: 70px;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call {
+  margin-left: 12px;
+}
+
+.iconText {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 11.8px;
+  margin-top: 12px;
+}

@@ -5,6 +5,7 @@ import { Title } from '../Title';
 import { BeerList } from '../BeerList';
 import { BeerItem } from '../BeerItem';
 import { MoreProducts } from '../MoreProducts';
+import { AboutUs } from '../AboutUs';
 
 function AppUI() {
   const {
@@ -16,7 +17,7 @@ function AppUI() {
   
   return (
     <React.Fragment>
-      
+
       <Header />
 
       <Title />
@@ -37,6 +38,8 @@ function AppUI() {
       </BeerList>
 
       <MoreProducts />
+
+      <AboutUs />
 
     </React.Fragment>
   );
