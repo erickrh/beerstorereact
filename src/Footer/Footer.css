@@ -44,14 +44,14 @@
   margin-top: 12px;
 }
 
-.faq {
+.aboutUs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.faq p {
+.aboutUs p {
   text-transform: uppercase;
   margin-bottom: 18px;
   font-weight: 700;
@@ -59,8 +59,8 @@
   color: #101111;
 }
 
-.rectangle {
-  margin-top: 18px; /* Se tienen en cuenta los 18px de margin-bottom en faq p */
+.lineDivide {
+  margin-top: 18px; /* Se tienen en cuenta los 18px de margin-bottom en aboutUs p */
   margin-bottom: 36px;
   display: flex;
   justify-content: center;

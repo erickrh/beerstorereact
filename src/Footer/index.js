@@ -1,7 +1,7 @@
 import React from 'react';
-import './AboutUs.css';
+import './Footer.css';
 
-function AboutUs() {
+function Footer() {
   return (
     <React.Fragment>
 
@@ -27,7 +27,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="faq">
+      <div className="aboutUs">
         <p>sobre nosotros</p>
         <p>medidas de seguridad (covid-19)</p>
         <p>cómo mercar</p>
@@ -36,7 +36,7 @@ function AboutUs() {
         <p>zona de cobertura</p>
       </div>
 
-      <div className="rectangle">
+      <div className="lineDivide">
         <svg width="41" height="1" viewBox="0 0 41 1">
           <rect x="0.5" width="40" height="1" fill="#C8D5D9"/>
         </svg>
@@ -58,4 +58,4 @@ function AboutUs() {
   );
 }
 
-export { AboutUs };
+export { Footer };
