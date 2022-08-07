@@ -8,9 +8,14 @@
   position: fixed;
 }
 
+.headerContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu {
   margin-left: 22px;
-  cursor: pointer;
 }
 
 .logo {
@@ -20,7 +25,6 @@
 .search {
   position: absolute;
   right: 53px;
-  cursor: pointer;
 }
 
 .car {
