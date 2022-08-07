@@ -10,6 +10,7 @@
 
 .menu {
   margin-left: 22px;
+  cursor: pointer;
 }
 
 .logo {
@@ -19,6 +20,7 @@
 .search {
   position: absolute;
   right: 53px;
+  cursor: pointer;
 }
 
 .car {
