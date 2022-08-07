@@ -43,3 +43,55 @@
   font-size: 11.8px;
   margin-top: 12px;
 }
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.faq p {
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 14.16px;
+  color: #101111;
+}
+
+.rectangle {
+  margin-top: 18px; /* Se tienen en cuenta los 18px de margin-bottom en faq p */
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.instagramContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.instagram {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000A3;
+}
+
+.politics {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11.8px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.endFooter {
+  background-color: #0F0F0F;
+  width: 100%;
+  height: 47px;
+}
