@@ -17,7 +17,6 @@
 .moreProductsContainer p {
   font-weight: 400;
   font-size: 11.8px;
-  /* margin-top: 12px; */
   margin-left: 18px;
   margin-bottom: 2px;
   color: #101111;
@@ -30,9 +29,14 @@
   color: #101111;
 }
 
+.moreProductsContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .arrowRight {
   margin-right: 17px;
-  cursor: pointer;
 }
 
 @media only screen and (min-width: 720px) {

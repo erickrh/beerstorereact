@@ -20,9 +20,9 @@ function BeerItem(props) {
           <div value={props.filterId}></div>
         </div>
       </div>
-      <div className="agregarButton">
+      <button type='button' className="agregarButton">
         <p>agregar</p>
-      </div>
+      </button>
     </li>
   );
 }
