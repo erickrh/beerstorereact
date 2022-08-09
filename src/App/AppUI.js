@@ -6,6 +6,7 @@ import { BeerList } from '../BeerList';
 import { BeerItem } from '../BeerItem';
 import { MoreProducts } from '../MoreProducts';
 import { Footer } from '../Footer';
+import { FilterFixed } from '../FilterFixed';
 
 function AppUI() {
   const {
@@ -40,6 +41,8 @@ function AppUI() {
       <MoreProducts />
 
       <Footer />
+
+      <FilterFixed />
 
     </React.Fragment>
   );
