@@ -7,6 +7,8 @@ import { BeerItem } from '../BeerItem';
 import { MoreProducts } from '../MoreProducts';
 import { Footer } from '../Footer';
 import { FilterFixed } from '../FilterFixed';
+import { Modal } from '../Modal';
+import { FilterForm } from '../FilterForm';
 
 function AppUI() {
   const {
@@ -43,6 +45,10 @@ function AppUI() {
       <Footer />
 
       <FilterFixed />
+
+      <Modal>
+        <FilterForm />
+      </Modal>
 
     </React.Fragment>
   );
