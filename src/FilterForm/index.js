@@ -2,6 +2,67 @@ import React from 'react';
 import './FilterForm.css';
 
 function FilterForm() {
+
+  // let checkbox = false;
+  // const checkboxToggle = () => {
+  //   checkbox = !checkbox;
+
+  //   const customCheckboxOff = document.querySelector('.customCheckboxOff');
+  //   const customCheckboxOn =  document.querySelector('.customCheckboxOn');
+
+  //   if (checkbox) {
+  //     customCheckboxOn.classList.add('toggleCheckboxOn');
+  //     customCheckboxOff.classList.add('toggleCheckboxOff');
+  //     customCheckboxOff.classList.remove('toggleCheckboxOn');
+  //   } else {
+  //     customCheckboxOff.classList.add('toggleCheckboxOn');
+  //     customCheckboxOn.classList.remove('toggleCheckboxOn');
+  //     customCheckboxOff.classList.remove('toggleCheckboxOff');
+  //   }
+  // };
+
+
+  // let [morena, setMorena] = React.useState(false);
+  // let [roja, setRoja] = React.useState(false);
+
+  // const checkboxToggle = (beerID) => {
+  //   if (beerID == 'morena') {
+  //     setMorena(prevState => !prevState);
+  //   } else if (beerID == 'roja') {
+  //     setRoja(prevState => !prevState);
+  //   }
+  //   return beerID;
+  // };
+
+  let beerIDs = {
+    morena: {
+      id: 2,
+      state: false,
+    },
+  };
+
+  const checkboxToggle = (beerID) => {
+    beerIDs[beerID].state = !beerIDs[beerID].state;
+
+    // checkbox toggle
+    const customCheckboxOff = document.querySelector('.customCheckboxOff');
+    const customCheckboxOn =  document.querySelector('.customCheckboxOn');
+    if (beerIDs[beerID].state) {
+      customCheckboxOn.classList.add('toggleCheckboxOn');
+      customCheckboxOff.classList.add('toggleCheckboxOff');
+      customCheckboxOff.classList.remove('toggleCheckboxOn');
+    } else {
+      customCheckboxOff.classList.add('toggleCheckboxOn');
+      customCheckboxOn.classList.remove('toggleCheckboxOn');
+      customCheckboxOff.classList.remove('toggleCheckboxOff');
+    }
+
+    console.log(beerIDs);
+    return beerIDs[beerID].state;
+  };
+
+  console.log(`El resultado es: ${beerIDs.morena.state}`);
+
   return (
     <form className="filterFormContainer">
 
@@ -20,30 +81,60 @@ function FilterForm() {
           <rect width="345" height="1" fill="#E5E5E5"/>
         </svg>
 
-        <div className="beerNameFlex">
-          <p>Rubia</p>
+        {/* <label className="beerNameFlex">
+          Rubia
           <input type="checkbox" name="rubia" id="rubia" />
-        </div>
+        </label> */}
+
+        <label className="containerCheckbox">
+          Rubia
+          <input type="checkbox" checked="checked"/>
+          <span className="checkmark"></span>
+        </label>
         
         {/* LineDivide */}
         <svg height="1" width="100%" viewBox="0 0 100 1"  preserveAspectRatio="none">
           <rect width="345" height="1" fill="#E5E5E5"/>
         </svg>
 
-        <div className="beerNameFlex">
-          <p>Morena</p>
+        {/* <label className="beerNameFlex">
+          Morena
           <input type="checkbox" name="morena" id="morena" />
-        </div>
+        </label> */}
+
+        <label className='beerNameFlex' onClick={() => checkboxToggle('morena')}>
+          Morena
+          <div className="customCheckBoxContainer">
+            <div className='customCheckboxOff'></div>
+            <div className='customCheckboxOn toggleCheckboxOff'>
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fillRule="evenodd" clipRule="evenodd" d="M17.5222 9.47484C17.9128 9.08432 17.9128 8.45116 17.5222 8.06063L17.1687 7.70708C16.7782 7.31655 16.145 7.31655 15.7545 7.70708L10.9816 12.48C10.591 12.8705 9.95788 12.8705 9.56736 12.48L8.47497 11.3876C8.08444 10.9971 7.45128 10.9971 7.06075 11.3876L6.7072 11.7411C6.31668 12.1317 6.31668 12.7648 6.7072 13.1554L8.50624 14.9544C8.50649 14.9546 8.50649 14.9551 8.50624 14.9553C8.50598 14.9556 8.50598 14.956 8.50624 14.9562L9.56643 16.0164C9.95696 16.407 10.5901 16.407 10.9806 16.0164L17.5222 9.47484Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </label>
 
         {/* LineDivide */}
         <svg height="1" width="100%" viewBox="0 0 100 1"  preserveAspectRatio="none">
           <rect width="345" height="1" fill="#E5E5E5"/>
         </svg>
 
-        <div className="beerNameFlex">
-          <p>Roja</p>
+        {/* <label className="beerNameFlex">
+          Roja
           <input type="checkbox" name="roja" id="roja" />
-        </div>
+        </label> */}
+
+        {/* <label className='beerNameFlex' onClick={() => checkboxToggle('roja')}>
+          Roja
+          <div className="customCheckBoxContainer">
+            <div className={`customCheckboxOff ${roja && 'toggleCheckboxOff'}`}></div>
+            <div className={`customCheckboxOn toggleCheckboxOff ${roja && 'toggleCheckboxOn'}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fillRule="evenodd" clipRule="evenodd" d="M17.5222 9.47484C17.9128 9.08432 17.9128 8.45116 17.5222 8.06063L17.1687 7.70708C16.7782 7.31655 16.145 7.31655 15.7545 7.70708L10.9816 12.48C10.591 12.8705 9.95788 12.8705 9.56736 12.48L8.47497 11.3876C8.08444 10.9971 7.45128 10.9971 7.06075 11.3876L6.7072 11.7411C6.31668 12.1317 6.31668 12.7648 6.7072 13.1554L8.50624 14.9544C8.50649 14.9546 8.50649 14.9551 8.50624 14.9553C8.50598 14.9556 8.50598 14.956 8.50624 14.9562L9.56643 16.0164C9.95696 16.407 10.5901 16.407 10.9806 16.0164L17.5222 9.47484Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </label> */}
 
         {/* LineDivide */}
         <svg height="1" width="100%" viewBox="0 0 100 1"  preserveAspectRatio="none">
