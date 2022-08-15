@@ -15,7 +15,6 @@ function FilterForm() {
     } else if (beerID == 'roja') {
       setRoja(prevState => !prevState);
     }
-    console.log(beerID);
     return beerID;
   };
 
@@ -39,7 +38,7 @@ function FilterForm() {
 
         <label className='beerNameFlex' onClick={() => checkboxToggle('rubia')}>
           Rubia
-          <div className="customCheckBoxContainer">
+          <div>
             <div className={`customCheckboxOff ${rubia && 'toggleCheckboxOff'}`}></div>
             <div className={`customCheckboxOn toggleCheckboxOff ${rubia && 'toggleCheckboxOn'}`}>
               <svg width="24" height="24" viewBox="0 0 24 24">
