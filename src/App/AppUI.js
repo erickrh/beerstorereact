@@ -16,6 +16,7 @@ function AppUI() {
     // eslint-disable-next-line no-unused-vars
     error,
     isLoaded,
+    openModal,
   } = React.useContext(TodoContext);
   
   return (
@@ -36,8 +37,7 @@ function AppUI() {
             img={item.img}
             filterId={item.filterId}
           />
-        ))
-        }
+        ))}
       </BeerList>
 
       <MoreProducts />
@@ -46,10 +46,12 @@ function AppUI() {
 
       <FilterFixed />
 
-      <Modal>
-        <FilterForm />
-      </Modal>
-
+      {openModal && (
+        <Modal>
+          <FilterForm />
+        </Modal>
+      )}
+      
     </React.Fragment>
   );
 }

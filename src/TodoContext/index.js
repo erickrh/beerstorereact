@@ -11,11 +11,15 @@ function TodoProvider(props) {
     isLoaded,
   } = useFetchAPI('./products.json');
 
+  const [openModal, setOpenModal] = React.useState(false);
+
   return (
     <TodoContext.Provider value={{
       items,
       error,
       isLoaded,
+      openModal,
+      setOpenModal,
     }}>
       {props.children}
     </TodoContext.Provider>
