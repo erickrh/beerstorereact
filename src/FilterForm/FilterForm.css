@@ -1,3 +1,9 @@
+.filterFormContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
 .closeForm {
   width: 40px;
   height: 40px;
@@ -9,12 +15,13 @@
   background-color: #FFFFFF;
   position: absolute;
   right: 15px;
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 .filterForm {
-  margin: 12px 15px 0 15px;
+  margin: 0 15px;
   background-color: #FFFFFF;
+  padding-top: 12px;
 }
 
 .filterForm h3 {
@@ -34,10 +41,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.filterForm svg {
-  margin: 14px 0 ;
+  margin-top: -4px;
+  margin-bottom: -15px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
 }
 
 .buttonsContainer {
@@ -47,7 +54,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -4px;
+  margin-top: 13px;
 }
 
 .FilterForm-filterButton {

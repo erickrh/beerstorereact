@@ -1,0 +1,23 @@
+.modalBackground {
+  background: rgba(32, 35, 41, .8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modalWindow {
+  position: fixed;
+  top: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.clickOutside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
