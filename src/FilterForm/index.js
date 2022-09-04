@@ -1,7 +1,9 @@
 import React from 'react';
 import './FilterForm.css';
+import { TodoContext } from '../TodoContext';
 
 function FilterForm() {
+  const { setOpenModal } = React.useContext(TodoContext);
 
   let [rubia, setRubia] = React.useState(false);
   let [morena, setMorena] = React.useState(false);
@@ -18,16 +20,29 @@ function FilterForm() {
     return beerID;
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const onCancel = () => {
+    document.querySelector('.filterFormContainer').classList.add('hideFilterFormContainer');
+    setTimeout(() => {
+      setOpenModal(false);
+    }, 400);
+  };
+
   return (
     <div className="filterFormContainer">
 
-      <form>
+      <form onSubmit={onSubmit}>
         {/* Close form icon */}
-        <div className="closeForm">
+        <button
+          className="closeForm"
+          onClick={onCancel}>
           <svg width="14" height="14" viewBox="0 0 14 14">
             <path fillRule="evenodd" clipRule="evenodd" d="M12.8845 2.51359C13.275 2.12307 13.275 1.4899 12.8845 1.09938L12.8256 1.04045C12.435 0.649928 11.8019 0.649927 11.4114 1.04045L7.66962 4.78218C7.2791 5.17271 6.64593 5.17271 6.25541 4.78218L2.51368 1.04045C2.12315 0.649928 1.48999 0.649928 1.09946 1.04045L1.04054 1.09938C0.650012 1.4899 0.650012 2.12307 1.04054 2.51359L4.78227 6.25532C5.17279 6.64585 5.17279 7.27901 4.78227 7.66954L1.04045 11.4114C0.649927 11.8019 0.649928 12.435 1.04045 12.8256L1.09938 12.8845C1.4899 13.275 2.12307 13.275 2.51359 12.8845L6.25541 9.14268C6.64593 8.75215 7.2791 8.75215 7.66962 9.14268L11.4114 12.8845C11.802 13.275 12.4351 13.275 12.8256 12.8845L12.8846 12.8256C13.2751 12.435 13.2751 11.8019 12.8846 11.4114L9.14276 7.66954C8.75224 7.27901 8.75223 6.64585 9.14276 6.25532L12.8845 2.51359Z" fill="#101111"/>
           </svg>
-        </div>
+        </button>
         
 
         <div className="filterForm">
@@ -94,6 +109,7 @@ function FilterForm() {
           <button className='FilterForm-cleanButton'>
             <p>limpiar</p>
           </button>
+
           <button type='submit' className='FilterForm-filterButton'>
             <p>filtrar</p>
             <svg width="19" height="19" viewBox="0 0 24 24">

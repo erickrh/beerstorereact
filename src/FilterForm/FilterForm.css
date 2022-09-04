@@ -2,6 +2,25 @@
   width: 100%;
   height: 100%;
   background-color: #FFFFFF;
+  animation-duration: 0.4s;
+  animation-name: showModal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showModal {
+  from {transform: translateY(100%);}
+  to {transform: translateY(0%);}
+}
+
+.hideFilterFormContainer {
+  animation-duration: 0.4s;
+  animation-name: hideModal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideModal {
+  from {transform: translateY(0%);}
+  to {transform: translateY(100%);}
 }
 
 .closeForm {
