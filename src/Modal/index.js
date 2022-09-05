@@ -6,7 +6,7 @@ import { TodoContext } from '../TodoContext';
 function Modal(props) {
   const { setOpenModal } = React.useContext(TodoContext);
 
-  const onCancel = () => {
+  const closeForm = () => {
     document.querySelector('.filterFormContainer').classList.add('hideFilterFormContainer');
     setTimeout(() => {
       setOpenModal(false);
@@ -18,7 +18,7 @@ function Modal(props) {
       <div className="modalWindow">
         {props.children}
       </div>
-      <div className="clickOutside" onClick={onCancel}></div>
+      <div className="clickOutside" onClick={closeForm}></div>
     </div>,
     document.getElementById('modal')
   );
