@@ -3,11 +3,15 @@ import './FilterForm.css';
 import { TodoContext } from '../TodoContext';
 
 function FilterForm() {
-  const { setOpenModal } = React.useContext(TodoContext);
-
-  let [rubia, setRubia] = React.useState(false);
-  let [morena, setMorena] = React.useState(false);
-  let [roja, setRoja] = React.useState(false);
+  const {
+    setOpenModal,
+    rubia,
+    setRubia,
+    morena,
+    setMorena,
+    roja,
+    setRoja,
+  } = React.useContext(TodoContext);
 
   const checkboxToggle = (beerID) => {
     if (beerID == 'rubia') {

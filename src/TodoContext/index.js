@@ -11,6 +11,12 @@ function TodoProvider(props) {
     isLoaded,
   } = useFetchAPI('./products.json');
 
+  // Beers options states.
+  const [rubia, setRubia] = React.useState(false);
+  const [morena, setMorena] = React.useState(false);
+  const [roja, setRoja] = React.useState(false);
+
+  // Modal state.
   const [openModal, setOpenModal] = React.useState(false);
 
   return (
@@ -18,6 +24,12 @@ function TodoProvider(props) {
       items,
       error,
       isLoaded,
+      rubia,
+      setRubia,
+      morena,
+      setMorena,
+      roja,
+      setRoja,
       openModal,
       setOpenModal,
     }}>
