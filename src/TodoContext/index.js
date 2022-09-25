@@ -40,6 +40,10 @@ function TodoProvider(props) {
       }
     }
 
+    if (collector.products.length == 0) {
+      collector.products = itemsConst.products;
+    }
+
     setItems(collector);
     return collector;
   };
