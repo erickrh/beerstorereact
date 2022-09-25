@@ -4,6 +4,7 @@ function useFetchAPI(data) {
   const [error, setError] = React.useState(null);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [items, setItems] = React.useState([]);
+  const [itemsConst, setItemsConst] = React.useState([]);
 
   React.useEffect(() => {
     fetch(data)
@@ -12,6 +13,7 @@ function useFetchAPI(data) {
         (result) => {
           setIsLoaded(true);
           setItems(result);
+          setItemsConst(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -22,8 +24,11 @@ function useFetchAPI(data) {
 
   return {
     items,
+    setItems,
     error,
-    isLoaded
+    isLoaded,
+    itemsConst,
+    setItemsConst,
   };
 }
 

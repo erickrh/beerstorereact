@@ -7,8 +7,10 @@ const TodoContext = React.createContext();
 function TodoProvider(props) {
   const {
     items,
+    setItems,
     error,
     isLoaded,
+    itemsConst,
   } = useFetchAPI('./products.json');
 
   // Beers options states.
@@ -18,6 +20,29 @@ function TodoProvider(props) {
 
   // Modal state.
   const [openModal, setOpenModal] = React.useState(false);
+
+  const ItemsHandler = () => {
+    let filtersId = [];
+    
+    if (rubia) filtersId.push(1);
+    if (morena) filtersId.push(2);
+    if (roja) filtersId.push(3);
+
+    let collector = {
+      products: []
+    };
+
+    for (let item in itemsConst.products) {
+      for (let i = 0; i <= filtersId.length; i++) {
+        if (itemsConst.products[item].filterId == filtersId[i]) {
+          collector.products.push(itemsConst.products[item]);
+        }
+      }
+    }
+
+    setItems(collector);
+    return collector;
+  };
 
   return (
     <TodoContext.Provider value={{
@@ -32,6 +57,7 @@ function TodoProvider(props) {
       setRoja,
       openModal,
       setOpenModal,
+      ItemsHandler,
     }}>
       {props.children}
     </TodoContext.Provider>
