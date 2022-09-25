@@ -2,7 +2,7 @@
 
 This is a nice beer store made with React.js
 
-Take a look here: 
+Take a look here: https://erickrh.github.io/beerstorereact/
 
 #### **Screenshots**
 
